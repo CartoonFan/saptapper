@@ -1,5 +1,5 @@
-Saptapper
-=========
+# Saptapper
+
 [![Travis Build Status](https://travis-ci.com/loveemu/saptapper.svg?branch=master)](https://travis-ci.com/loveemu/saptapper) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/8gdychs5ftgijyui/branch/master?svg=true)](https://ci.appveyor.com/project/loveemu/saptapper/branch/master)
 
 Automated GSF ripper tool created by Caitsith2, reimplemented by loveemu from scratch.
@@ -8,13 +8,11 @@ Automated GSF ripper tool created by Caitsith2, reimplemented by loveemu from sc
 Caitsith2's original version can be found at GSF Central
 <http://www.caitsith2.com/gsf/ripping.html>
 
-Downloads
----------
+## Downloads
 
 - [Latest release](https://github.com/loveemu/saptapper/releases/latest)
 
-Usage
------
+## Usage
 
 Syntax: `saptapper {OPTIONS} romfile`
 
@@ -29,8 +27,9 @@ Syntax: `saptapper {OPTIONS} romfile`
 |`-o[basename]`                          |The output filename (without extension)                     |
 |`romfile`                               |The ROM file to be processed                                |
 
-Note
-----
+## Note
+
+### Automatic Ripping
 
 Most of the games using the sappy driver are ripped completely and automatically with
 this program. The only manual step left, is sorting and optimizing the set.
@@ -39,6 +38,20 @@ If saptapper was unable to rip the game properly, but did find one of the sappy 
 functions identifying it as being sappy compatible, an error will be written to STDERR,
 identifying what function it was not able to find.
 
+### Streamed Audio and Verification
+
+Some games may require additional manual investigation, especially when streamed
+audio or uncommon driver behavior is involved.
+
+For example, Castlevania: Circle of the Moon and Custom Robo GX both contain
+cases where extracted playback may differ slightly from the original in-game
+audio unless additional analysis is performed.
+
+Even when a rip appears successful, playback accuracy should still be verified
+against the original hardware or emulator.
+
+### Set Optimization
+
 Before submitting a gsf set that has been ripped, with or without saptapper, please at the 
-minimum optimize the set first.  Ideally, all sfxs/voices should be removed, all 
+minimum optimize the set first. Ideally, all sfxs/voices should be removed, all 
 music/jingles kept.
